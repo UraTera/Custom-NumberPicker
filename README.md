@@ -5,6 +5,10 @@
 
 The libs folder contains the compiled NumberPicker.aar library.
 
+Connection:
+```
+implementation(files("libs/NumberPicker.aar"))
+```
 ### Attributes
 |Attributes |Description|
 |-----------|-----------|
