@@ -10,22 +10,23 @@ Connection:
 implementation(files("libs/NumberPicker.aar"))
 ```
 ### Attributes
-|Attributes |Description|
-|-----------|-----------|
-|np_dividerColor |Divider color|
-|np_dividerHeight |Divider height|
-|np_dividerOffset |Divider offset|
-|np_max |Maximum value|
-|np_min |Minimum value|
-|np_showRows5|false – 3 rows, true – 5 rows|
-|np_textArray |Array of values|
-|np_textColorNormal |Unselected text color|
-|np_textColorSelected |Selected text color|
-|np_textSizeNormal |Unselected text size|
-|np_textSizeSelected |Selected text size|
-|np_textHint |Hint text|
-|np_textColorHint |Hint text color|
-|np_textSizeHint |Hint text size|
+|Attributes |Description|Related method(s)|
+|-----------|-----------|-----------------|
+|np_dividerColor |Divider color||
+|np_dividerHeight |Divider height||
+|np_dividerOffset |Divider offset||
+|np_max |Maximum value|setMax, getMax|
+|np_min |Minimum value| setMin, getMin|
+|np_showRows5|false – 3 rows, true – 5 rows||
+|np_textArray |Array of values|setDisplayedValues, getDisplayedValues|
+|np_textColorNormal |Unselected text color||
+|np_textColorSelected |Selected text color||
+|np_textSizeNormal |Unselected text size||
+|np_textSizeSelected |Selected text size||
+|np_textHint |Hint text||
+|np_textColorHint |Hint text color||
+|np_textSizeHint |Hint text size||
+
 
 Value change listener:
 ```
