@@ -28,9 +28,14 @@ implementation(files("libs/NumberPicker.aar"))
 |np_textSizeHint |Hint text size||
 
 
+
 Value change listener:
 ```
 picker.setOnChangeListener { picker, value -> 
     
 }
+```
+Methods:
+```
+setValue, getValue
 ```
