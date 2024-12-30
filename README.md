@@ -1,2 +1,1 @@
-# Custom-NumberPicker
- Customizable NumberPicker. Four view options. Open source.
+## Customizable NumberPicker. Four view options. Open source.
