@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".GetTimeActivity"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:id="@+id/clPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:baselineAligned="false"
+        app:layout_constraintBottom_toTopOf="@id/lineBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/lineH"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvValueH"
+                style="@style/text2.v"
+                android:text="@string/_0" />
+
+            <TextView
+                android:id="@+id/tvHour"
+                style="@style/text2"
+                android:text="@string/h" />
+
+            <com.tera.custom_numberpicker.NumberPickerCustom
+                android:id="@+id/npHour"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pic_height"
+                app:np_textArray="@array/array_24"
+                app:np_dividerColor="@color/divider"
+                app:np_dividerOffset="@dimen/divider_off"
+                app:np_showRows5="true"
+                app:np_textColorNormal="@color/text_normal"
+                app:np_textColorSelected="@color/white"
+                app:np_textSizeNormal="@dimen/text_normal2"
+                app:np_textSizeSelected="@dimen/text_select2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lineM"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvValueM"
+                style="@style/text2.v"
+                android:text="@string/_0" />
+
+            <TextView
+                android:id="@+id/tvMin"
+                style="@style/text2"
+                android:text="@string/m" />
+
+            <com.tera.custom_numberpicker.NumberPickerCustom
+                android:id="@+id/npMin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pic_height"
+                app:np_textArray="@array/array_60"
+                app:np_dividerColor="@color/divider"
+                app:np_dividerOffset="@dimen/divider_off"
+                app:np_showRows5="true"
+                app:np_textColorNormal="@color/text_normal"
+                app:np_textColorSelected="@color/white"
+                app:np_textSizeNormal="@dimen/text_normal2"
+                app:np_textSizeSelected="@dimen/text_select2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lineS"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvValueS"
+                style="@style/text2.v"
+                android:text="@string/_0" />
+
+            <TextView
+                android:id="@+id/tvSec"
+                style="@style/text2"
+                android:text="@string/s" />
+
+            <com.tera.custom_numberpicker.NumberPickerCustom
+                android:id="@+id/npSec"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pic_height"
+                app:np_textArray="@array/array_60"
+                app:np_dividerColor="@color/divider"
+                app:np_dividerOffset="@dimen/divider_off"
+                app:np_showRows5="true"
+                app:np_textColorNormal="@color/text_normal"
+                app:np_textColorSelected="@color/white"
+                app:np_textSizeNormal="@dimen/text_normal2"
+                app:np_textSizeSelected="@dimen/text_select2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bnCancel"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bnOc"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/bnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:src="@drawable/ic_time"
+            android:visibility="gone"
+            tools:ignore="ContentDescription,
+            RelativeOverlap,SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
