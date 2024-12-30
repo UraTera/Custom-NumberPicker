@@ -27,3 +27,9 @@ implementation(files("libs/NumberPicker.aar"))
 |np_textColorHint |Hint text color|
 |np_textSizeHint |Hint text size|
 
+Value change listener:
+```
+picker.setOnChangeListener { picker, value -> 
+    
+}
+```
