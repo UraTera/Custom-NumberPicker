@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Выбор номера</string>
+
+    <string name="get_time">Получить время</string>
+    <string name="cancel">Отмена</string>
+    <string name="ok">Применить</string>
+
+    <string name="h">ч</string>
+    <string name="m">м</string>
+    <string name="s">с</string>
+    <string name="min">мин.</string>
+    <string name="sec">сек.</string>
+    <string name="day">день</string>
+    <string name="month">месяц</string>
+</resources>

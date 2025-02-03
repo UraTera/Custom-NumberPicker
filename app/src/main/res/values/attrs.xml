@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NumberPickerCustom">
+
+        <attr name="np_dividerColor" format="color" />
+        <attr name="np_dividerHeight" format="dimension" />
+        <attr name="np_dividerOffset" format="dimension" />
+
+        <attr name="np_fadingExtent" format="integer" />
+        <attr name="np_fontFamily" format="reference" />
+
+        <attr name="np_hintText" format="string" />
+        <attr name="np_hintTextColor" format="color" />
+        <attr name="np_hintTextSize" format="dimension" />
+        <attr name="np_intervalLongPress" format="integer" />
+
+        <attr name="np_maxValue" format="integer" />
+        <attr name="np_minValue" format="integer" />
+
+        <attr name="np_textArray" format="reference" />
+        <attr name="np_textColor" format="color" />
+        <attr name="np_textColorSel" format="color" />
+        <attr name="np_textOffset" format="dimension" />
+        <attr name="np_textSize" format="dimension" />
+        <attr name="np_textSizeSel" format="dimension" />
+
+        <attr name="np_showRows5" format="boolean" />
+        <attr name="np_showZeros" format="boolean" />
+
+    </declare-styleable>
+<!--19-->
+
+</resources>
