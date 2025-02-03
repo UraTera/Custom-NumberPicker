@@ -33,12 +33,22 @@ implementation(files("libs/NumberPicker.aar"))
 |np_showRows5        |Show 5 rows |false
 |np_showZeros        |Show nonsignificant zeros |false
 
-Value change listener:
+Value change listener.
+
+Kotlin
 ```
 picker.setOnChangeListener { picker, value -> 
-   myValue = value 
+   mValue = value 
 }
 ```
+Java
+```
+npCustom.setOnChangeListener((numberPickerCustom, integer) -> {
+    mValue = integer
+    return null;
+});
+```
+
 Methods:
 ```
 setMaxValue, setValue, getValue, getValueString, setDisplayedValues, setScroll
