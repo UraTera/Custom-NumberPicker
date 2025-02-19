@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/tvValue1"
+        style="@style/text1"
+        android:layout_height="0dp"
+        android:text="@string/_0"
+        app:layout_constraintEnd_toEndOf="@+id/picker1"
+        app:layout_constraintStart_toStartOf="@+id/picker1"
+        app:layout_constraintTop_toTopOf="@+id/tvValue2" />
+
+    <com.tera.custom_numberpicker.NumberPickerCustom
+        android:id="@+id/picker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/picker2"
+        app:layout_constraintEnd_toStartOf="@+id/picker2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:np_dividerHeight="2dp"
+        app:np_hintText="@string/day"
+        app:np_intervalLongPress="100"
+        app:np_showZeros="true"
+        app:np_maxValue="31" />
+
+    <TextView
+        android:id="@+id/tvValue2"
+        style="@style/text1"
+        android:text="@string/_0"
+        app:layout_constraintEnd_toEndOf="@+id/picker2"
+        app:layout_constraintStart_toStartOf="@+id/picker2"
+        app:layout_constraintTop_toTopOf="@+id/tvValue3" />
+
+    <com.tera.custom_numberpicker.NumberPickerCustom
+        android:id="@+id/picker2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/picker3"
+        app:layout_constraintEnd_toStartOf="@+id/picker3"
+        app:layout_constraintStart_toEndOf="@id/picker1"
+        app:np_textArray="@array/months"
+        app:np_fadingExtent="6"
+        app:np_hintText="@string/month"
+        app:np_textColorSel="#BA4606" />
+
+    <TextView
+        android:id="@+id/tvValue3"
+        style="@style/text1"
+        android:text="@string/_0"
+        app:layout_constraintEnd_toEndOf="@+id/picker3"
+        app:layout_constraintStart_toStartOf="@+id/picker3"
+        app:layout_constraintTop_toTopOf="@+id/tvValue4" />
+
+    <com.tera.custom_numberpicker.NumberPickerCustom
+        android:id="@+id/picker3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/picker4"
+        app:layout_constraintEnd_toStartOf="@+id/picker4"
+        app:layout_constraintStart_toEndOf="@id/picker2"
+        app:np_dividerColor="@color/red_700"
+        app:np_fadingExtent="10"
+        app:np_showRows5="true"
+        app:np_textColorSel="@color/red_700"
+        app:np_textSize="@dimen/text_normal"
+        app:np_textSizeSel="@dimen/text_select" />
+
+    <TextView
+        android:id="@+id/tvValue4"
+        style="@style/text1"
+        android:text="@string/_0"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintEnd_toEndOf="@+id/picker4"
+        app:layout_constraintBottom_toTopOf="@id/picker4"
+        app:layout_constraintStart_toStartOf="@+id/picker4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tera.custom_numberpicker.NumberPickerCustom
+        android:id="@+id/picker4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/picker3"
+        app:layout_constraintTop_toBottomOf="@+id/tvValue4"
+        app:np_dividerColor="#0223A0"
+        app:np_dividerHeight="3dp"
+        app:np_fadingExtent="0"
+        app:np_fontFamily="@font/led_bold"
+        app:np_showRows5="true"
+        app:np_showZeros="true"
+        app:np_textColor="#6C88FF"
+        app:np_textColorSel="#011FB3"
+        app:np_textSize="@dimen/text_normal"
+        app:np_textSizeSel="@dimen/text_select" />
+
+    <LinearLayout
+        android:id="@+id/llTime"
+        style="@style/line1"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/bnGetTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvHour"
+            style="@style/text1.t"
+            android:text="@string/_0" />
+
+        <TextView
+            android:id="@+id/tvMin"
+            style="@style/text1.t"
+            android:text="@string/_0_" />
+
+        <TextView
+            android:id="@+id/tvSec"
+            style="@style/text1.t"
+            android:text="@string/_0" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bnGetTime"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/get_time"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ButtonStyle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

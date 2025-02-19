@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    4 texts-->
+    <dimen name="margin_hor">35sp</dimen>
+
+    <dimen name="text_select">25sp</dimen>
+    <dimen name="text_normal">20sp</dimen>
+
+    <dimen name="text_select2">35sp</dimen>
+    <dimen name="text_normal2">25sp</dimen>
+
+    <dimen name="text_select2_l">25sp</dimen>
+    <dimen name="text_normal2_l">20sp</dimen>
+
+    <dimen name="space_width">60sp</dimen>
+    <dimen name="divider_off">16sp</dimen>
+    <dimen name="divider_off_l">30sp</dimen>
+
+    <style name="text1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="text1.t">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="text2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="text2.v">
+         <item name="android:textSize">20sp</item>
+         <item name="android:layout_marginBottom">20dp</item>
+    </style>
+
+    <style name="line1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+</resources>

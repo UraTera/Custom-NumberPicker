@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".GetTimeActivity"
+    tools:ignore="HardcodedText">
+
+    <ImageView
+        android:id="@+id/bnSound"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ripple"
+        android:padding="8dp"
+        android:src="@drawable/ic_volume_up_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvHour"
+        style="@style/text2"
+        android:text="@string/_0"
+        app:layout_constraintEnd_toStartOf="@+id/tvMin"
+        app:layout_constraintBottom_toTopOf="@+id/lineTop"
+        app:layout_constraintStart_toStartOf="@+id/lineStart"/>
+
+    <TextView
+        android:id="@+id/tvMin"
+        style="@style/text2"
+        android:text="@string/_0"
+        app:layout_constraintEnd_toStartOf="@+id/tvSec"
+        app:layout_constraintStart_toEndOf="@+id/tvHour"
+        app:layout_constraintBottom_toTopOf="@+id/lineTop" />
+
+    <TextView
+        android:id="@+id/tvSec"
+        style="@style/text2"
+        android:text="@string/_0"
+        app:layout_constraintStart_toEndOf="@+id/tvMin"
+        app:layout_constraintBottom_toTopOf="@+id/lineTop"
+        app:layout_constraintEnd_toEndOf="@+id/lineEnd"/>
+
+    <com.tera.custom_numberpicker.NumberPickerCustom
+        android:id="@+id/npHour"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:np_dividerColor="@color/divider"
+        app:np_dividerOffset="@dimen/divider_off"
+        app:np_hintText="@string/h"
+        app:np_hintTextColor="@color/white"
+        app:np_intervalLongPress="100"
+        app:np_maxValue="23"
+        app:np_showRows5="true"
+        app:np_showZeros="true"
+        app:np_textColor="@color/white"
+        app:np_textColorSel="@color/white"
+        app:np_textSize="@dimen/text_normal2"
+        app:np_textSizeSel="@dimen/text_select2"
+        app:layout_constraintTop_toTopOf="@+id/lineNumTop"
+        app:layout_constraintStart_toStartOf="@+id/lineStart"
+        app:layout_constraintEnd_toStartOf="@+id/npMin"
+        app:layout_constraintBottom_toBottomOf="@+id/lineNumBottom"/>
+
+    <com.tera.custom_numberpicker.NumberPickerCustom
+        android:id="@+id/npMin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:np_dividerColor="@color/divider"
+        app:np_dividerOffset="@dimen/divider_off"
+        app:np_hintText="@string/m"
+        app:np_hintTextColor="@color/white"
+        app:np_intervalLongPress="100"
+        app:np_maxValue="59"
+        app:np_showRows5="true"
+        app:np_showZeros="true"
+        app:np_textColor="@color/white"
+        app:np_textColorSel="@color/white"
+        app:np_textSize="@dimen/text_normal2"
+        app:np_textSizeSel="@dimen/text_select2"
+        app:layout_constraintTop_toTopOf="@+id/lineNumTop"
+        app:layout_constraintStart_toEndOf="@+id/npHour"
+        app:layout_constraintEnd_toStartOf="@+id/npSec"
+        app:layout_constraintBottom_toBottomOf="@+id/lineNumBottom"/>
+
+    <com.tera.custom_numberpicker.NumberPickerCustom
+        android:id="@+id/npSec"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:np_dividerColor="@color/divider"
+        app:np_dividerOffset="@dimen/divider_off"
+        app:np_hintText="@string/s"
+        app:np_hintTextColor="@color/white"
+        app:np_intervalLongPress="100"
+        app:np_maxValue="59"
+        app:np_showRows5="true"
+        app:np_showZeros="true"
+        app:np_textColor="@color/white"
+        app:np_textColorSel="@color/white"
+        app:np_textSize="@dimen/text_normal2"
+        app:np_textSizeSel="@dimen/text_select2"
+        app:layout_constraintTop_toTopOf="@+id/lineNumTop"
+        app:layout_constraintStart_toEndOf="@+id/npMin"
+        app:layout_constraintEnd_toEndOf="@+id/lineEnd"
+        app:layout_constraintBottom_toBottomOf="@+id/lineNumBottom"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bnCancel"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/bnOc"
+        app:layout_constraintTop_toTopOf="@+id/lineBottom" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bnOc"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/lineEnd"
+        app:layout_constraintTop_toTopOf="@+id/lineBottom" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="120dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineNumTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="150dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="80dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineNumBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="140dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
